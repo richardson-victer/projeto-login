@@ -1,0 +1,27 @@
+html, body{
+    background-color: lightcoral;
+}
+
+img{
+    width: 250px;
+    border-radius: 10px;
+}
+
+
+main{
+    
+    background-color: white;
+    width: 250px;
+    
+    border-radius: 10px;
+}
+form{
+    padding-bottom: 10px;
+}
+form > h2{
+    text-align: center;
+}
+
+
+
+
