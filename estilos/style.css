@@ -5,15 +5,15 @@ html, body{
 img{
     width: 250px;
     border-radius: 10px;
+    height: 250px;
 }
 
-
-main{
-    
+body{
     background-color: white;
     width: 250px;
-    
     border-radius: 10px;
+    display: block;
+    padding-left: 10px;
 }
 form{
     padding-bottom: 10px;
