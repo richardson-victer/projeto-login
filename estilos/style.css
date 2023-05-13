@@ -1,27 +1,115 @@
-html, body{
-    background-color: lightcoral;
+@charset "utf-8";
+*{
+    margin: 0px;
+    padding: 0px;
 }
 
-img{
-    width: 250px;
-    border-radius: 10px;
-    height: 250px;
+body, html {
+    background-color:  #5f2c82;
+    height: 97vh;
+    width: 97vw;
+
 }
 
-body{
-    background-color: white;
-    width: 250px;
-    border-radius: 10px;
+main{
+    
+    height: 97vh;
+    width: 97vw; 
+}
+
+section{
     display: block;
-    padding-left: 10px;
+   
 }
-form{
-    padding-bottom: 10px;
+
+section#login{ 
+    /*Primeiro colocamos main como position relative e a section como absolute
+    usamos um top (afastar o topo 50%) e um left (afaster a esquerda 50%)
+    com isso a imagem não vai centralizar, ai precisamos puxar ela com transform -50% -50%
+    Ou seja, text-align não é a melhor opção
+    */
+    width: 250px;
+    height: 515px;  
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-form > h2{
+
+div#formulario{
+    padding: 10px;
+}
+section#login > div#imagem{
+    height: 200px;
+    background: #5f2c82 url(../pexels-pascal-weiland-2244429.jpg) no-repeat;
+    background-size: cover;   
+    border-radius: 10px 10px 0px 0px;
+    
+}
+
+div#formulario > h1{
     text-align: center;
 }
 
+div.log{
+    background-color: #5f2c82;
+    border: 2px solid #5f2c82;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px;
+}
+
+.log > input{
+    height: 6%;
+    width: calc(100% - 48px);
+    border-radius: 8px;
+    position: absolute;
+    background-color: rgb(165, 218, 215);
+    padding-bottom: 6px;
+}
+span{
+    color: white;
+    background-color: #5f2c82;
+    border-radius: 8px;
+    font-size: 250px;
 
 
+}
 
+input#entrar{
+    background-color: lightseagreen;
+    display: block;
+    width: 100%;
+    height: 40%;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
+    color: white;
+}
+input#entrar:hover{
+    background-color: rgb(45, 116, 112);
+}
+a{
+    border: 1px solid lightseagreen;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    padding-bottom: 5px;
+    text-decoration: none;
+    height: 40%;
+    width: 100%;
+    color: black;
+}
+
+a:hover{
+    background-color: lightseagreen;
+}
+span#mail{
+    color: black;
+    font-size: 1em;
+    background-color: white;
+}
