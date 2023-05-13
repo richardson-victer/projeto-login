@@ -1,115 +1,62 @@
 @charset "utf-8";
-*{
-    margin: 0px;
+
+/*
+    Paleta de cores
+    Verde: #49a09d
+    Lilás: #5f2c82
+*/
+
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
 
 body, html {
-    background-color:  #5f2c82;
-    height: 97vh;
-    width: 97vw;
+    background-color: #5f2c82;
+    height: 100vh;
+    width: 100vw;
 
 }
 
-main{
-    
-    height: 97vh;
-    width: 97vw; 
+main {
+    /*Não precisava ter essa main. Ela e o body estão iguais.*/
+    position: relative;
+    height: 100vh;
+    width: 100vw;
 }
 
-section{
-    display: block;
-   
-}
-
-section#login{ 
-    /*Primeiro colocamos main como position relative e a section como absolute
-    usamos um top (afastar o topo 50%) e um left (afaster a esquerda 50%)
-    com isso a imagem não vai centralizar, ai precisamos puxar ela com transform -50% -50%
-    Ou seja, text-align não é a melhor opção
-    */
-    width: 250px;
-    height: 515px;  
-    background-color: white;
-    border-radius: 20px;
+section#login {
+    /*Aqui mexemos na área completa de login, desde a parte branca (formulário) até a parte da imagem.*/
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+    overflow: hidden;
 
-div#formulario{
-    padding: 10px;
-}
-section#login > div#imagem{
-    height: 200px;
-    background: #5f2c82 url(../pexels-pascal-weiland-2244429.jpg) no-repeat;
-    background-size: cover;   
-    border-radius: 10px 10px 0px 0px;
-    
-}
-
-div#formulario > h1{
-    text-align: center;
-}
-
-div.log{
-    background-color: #5f2c82;
-    border: 2px solid #5f2c82;
-    display: block;
-    width: 100%;
-    height: 40px;
-    border-radius: 8px;
-    margin: 5px 0px;
-}
-
-.log > input{
-    height: 6%;
-    width: calc(100% - 48px);
-    border-radius: 8px;
-    position: absolute;
-    background-color: rgb(165, 218, 215);
-    padding-bottom: 6px;
-}
-span{
-    color: white;
-    background-color: #5f2c82;
-    border-radius: 8px;
-    font-size: 250px;
+    transition: width .3s, heigth .3s;
+    transition-timing-function: ease;
 
 
-}
-
-input#entrar{
-    background-color: lightseagreen;
-    display: block;
-    width: 100%;
-    height: 40%;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 5px;
-    color: white;
-}
-input#entrar:hover{
-    background-color: rgb(45, 116, 112);
-}
-a{
-    border: 1px solid lightseagreen;
-    border-radius: 10px;
-    display: block;
-    text-align: center;
-    padding-bottom: 5px;
-    text-decoration: none;
-    height: 40%;
-    width: 100%;
-    color: black;
-}
-
-a:hover{
-    background-color: lightseagreen;
-}
-span#mail{
-    color: black;
-    font-size: 1em;
     background-color: white;
+    width: 250px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.445);
+}
+
+section#login > div#imagem {
+    /*Aqui mexemos apenas na parte da imagem*/
+    display: block;
+    background: #5f2c82 url(../pexels-pascal-weiland-2244429.jpg) no-repeat;
+    height: 200px;
+    background-size: cover;
+    background-position: center top;
+}
+
+section#login > div#formulario { 
+    /*Aqui mexemos apenas na parte do formulário, ou seja, parte branca*/
+    padding: 10px;
+    display: block;
 }
